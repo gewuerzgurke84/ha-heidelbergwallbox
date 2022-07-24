@@ -5,7 +5,7 @@ I bought a Heidelberg Energy Wallbox to charge my electric car. The Wallbox can 
 Furthermore I tried to assemble everything with as few components as required.
 
 # Environment
-- [Heidelberg Energy Control](https://www.heidelberg-wallbox.eu/heidelberg-wallbox-energy-control/7/heidelberg-wallbox-energy-control-11kw-5m/7-5m-foerderfaehig-durch-die-kfw)
+- 1x [Heidelberg Energy Control](https://www.heidelberg-wallbox.eu/heidelberg-wallbox-energy-control/7/heidelberg-wallbox-energy-control-11kw-5m/7-5m-foerderfaehig-durch-die-kfw)
 - Homeassistant 2022.7.5 running inside a Jail
 - FreeBSD 13.0-RELEASE
 - [DSD Tech RS485/USB Adapter](https://www.amazon.de/DSD-TECH-Konverter-Kompatibel-Windows/dp/B07B416CPK)
@@ -13,7 +13,8 @@ Furthermore I tried to assemble everything with as few components as required.
 # Hardware Setup
 - Ensure that everything is powered off (german: ["Die 5 Sicherheitsregeln der Elektrotechnik"](https://www.medical-airport-service.de/arbeitssicherheit/die-5-sicherheitsregeln-der-elektrotechnik))
 - Remove the cover from the Wallbox
-- Connect the wire (I used RJ45/Cat6) with A/B pins at the right side of the board (IN). You should use one twisted pair
+- Connect the wire (I used RJ45/Cat6) with A/B pins at the right side of the board (IN, marked with label "4"). You should use one twisted pair ([picture source](https://www.mobilityhouse.com/media/productattachments/files/WallboxEnergy-Control_Lokales-Lastmanagement.pdf))
+
 - Configure the Wallbox via Jumpers according to this manual: https://github.com/steff393/wbec (see chapter, "Switch configuration of wallbox
 ")
 - Connect the wire with RS485/USB Adapter (A/B) which is plugged on your homeassistant hardware
