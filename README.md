@@ -15,8 +15,7 @@ Furthermore I tried to assemble everything with as few components as required.
 - Remove the cover from the Wallbox
 - Connect the wire (I used RJ45/Cat6) with A/B pins at the right side of the board (IN, marked with label "4"). You should use one twisted pair ([picture source](https://www.mobilityhouse.com/media/productattachments/files/WallboxEnergy-Control_Lokales-Lastmanagement.pdf))
 ![Board Layout](platinen_layout.png)
-- Configure the Wallbox via Jumpers according to this manual: https://github.com/steff393/wbec (see chapter, "Switch configuration of wallbox
-")
+- Configure the Wallbox via Jumpers according to this manual: https://github.com/steff393/wbec#switch-configuration-of-wallbox
 - Connect the wire with RS485/USB Adapter (A/B) which is plugged on your homeassistant hardware
 
 # Software Setup
