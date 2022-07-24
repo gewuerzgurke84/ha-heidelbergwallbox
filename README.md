@@ -20,13 +20,30 @@ Furthermore I tried to assemble everything with as few components as required.
 
 # Software Setup
 - Ensure you can access the DSD Tech Adapter via /dev/ttyUSB0 (Linux) or /dev/ttyU0 (Freebsd)
-- Configure the modbus integration as specified in integration-modbus.yaml
+- Add the modbus integration as specified in integration_wallbox.yaml
 - Add the modbus automation to ensure the wallbox does not show an error (a "heartbeat" command must be sent via modbus)
 
 ## Items
+- add modbus/wallbox configuration, e.g. in your configuration.yaml: `modbus: !include integration_wallbox.yaml`
+
 ## Automation
+- add automation_wallbox.yaml to your automation rules
+- by writing to a specific register you can now adjust the target output power of your wallbox
+
+**Example service call**
+
+```
+service: modbus.write_register
+data:
+  slave: 1
+  address: 261
+  value: 60
+  hub: wallbox
+```
+
+
 
 # References
 - Great project, https://github.com/steff393/wbec
 - Homeassistant's Modbus documentation, https://www.home-assistant.io/integrations/modbus/
-- 
+- Register Table, https://www.amperfied.de/wp-content/uploads/2022/06/ModBus-Register-Tabelle.pdf

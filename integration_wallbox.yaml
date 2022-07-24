@@ -1,0 +1,77 @@
+- name: wallbox
+  type: serial
+  baudrate: 19200
+  bytesize: 8
+  method: rtu
+  parity: E
+  port: /dev/ttyU0
+  stopbits: 1
+  sensors:
+    - name: wallboxStatus
+      address: 5
+      input_type: input
+      scan_interval: 15
+      slave: 1
+      data_type: uint16
+    - name: wallboxMBVersion
+      address: 4
+      input_type: input
+      scan_interval: 999
+      slave: 1
+      data_type: uint16
+    - name: wallboxTemperatur
+      address: 9
+      input_type: input
+      scan_interval: 120
+      slave: 1
+      data_type: int16
+      scale: 0.1
+      precision: 1
+    - name: wallboxExtLock
+      address: 13
+      input_type: input
+      scan_interval: 15
+      slave: 1
+      data_type: uint16
+    - name: wallboxRemoteLock
+      address: 259
+      input_type: holding
+      scan_interval: 15
+      slave: 1
+      data_type: uint16
+    - name: wallboxEnergySumHighB
+      address: 17
+      input_type: input
+      scan_interval: 120
+      slave: 1
+      data_type: uint16
+    - name: wallboxEnergySumLowB
+      address: 18
+      input_type: input
+      scan_interval: 120
+      slave: 1
+      data_type: uint16
+    - name: wallboxPower
+      address: 14
+      input_type: input
+      scan_interval: 15
+      slave: 1
+      data_type: uint16
+    - name: wallboxMaxCurrent
+      address: 100
+      input_type: input
+      scan_interval: 999
+      slave: 1
+      data_type: uint16            
+    - name: wallboxMinCurrent
+      address: 101
+      input_type: input
+      scan_interval: 999
+      slave: 1
+      data_type: uint16            
+    - name: wallboxCurrent
+      address: 261
+      input_type: holding
+      scan_interval: 15
+      slave: 1
+      data_type: uint16
